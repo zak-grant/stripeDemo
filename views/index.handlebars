@@ -1,21 +1,43 @@
 <div class="section py-2">
     <div class="row">
-        <div class="col-md-6 text-center">
-            <h1 class="display-3 mt-3 pt-5">ZH Canvas Picture</h1>
-            <p class="lead">The picture featured in that magazine</p>
-            <form action="/charge" method="POST">
-                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{stripePublishableKey}}" data-amount="1999"
-                    data-name="egg picture" data-description="egg picture by lexi z" data-image="/img/marketplace.png" data-locale="auto">
-                    </script>
-                <script>
-                    //This hides the defauly Stripe Button
-                    document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
-                </script>
-                <button type="submit" class="btn btn-secondary text-white btn-lg">Purchase Image</button>
-            </form>
+        <div class="col-md-6 text-center mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="display-3 mt-2 pt-4 card-title">ZH Canvas Picture</h1>
+                    <p class="lead mb-2 p-1">The picture featured in that magazine</p>
+                    <hr>
+                    <h5 class="mt-4 pt-3 lead">This page is in test mode</h5>
+                    <p class="lead">Use the following test info to see this in action</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Email: any fake email address</li>
+                        <li class="list-group-item">CC#: 4242 4242 4242 4242</li>
+                        <li class="list-group-item">MM/YY: any future month</li>
+                        <li class="list-group-item">CVC: Any 3 or 4 digit number</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
         <div class="col-md-6">
-            <img src="/img/photo01.jpg" alt="photo" class="mt-5 img-fluid">
+            <div class="card">
+
+                <img src="/img/photo01.jpg" alt="photo" class="img-fluid card-image-top">
+                <div class="card-body">
+                    <form action="/charge" method="POST">
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{stripePublishableKey}}" data-amount="1999"
+                            data-name="egg picture" data-description="egg picture by lexi z" data-image="/img/marketplace.png"
+                            data-locale="auto">
+                            </script>
+                        <script>
+                            //This hides the defauly Stripe Button
+                            document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+                        </script>
+                        <button type="submit" class="btn btn-secondary text-white btn-lg btn-block">Purchase Image</button>
+                    </form>
+                </div>
+            </div>
         </div>
+
     </div>
+</div>
 </div>
