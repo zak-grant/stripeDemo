@@ -1,0 +1,21 @@
+<div class="section py-2">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h1 class="display-3 mt-3 pt-5">ZH Canvas Picture</h1>
+            <p class="lead">The picture featured in that magazine</p>
+            <form action="/charge" method="POST">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{stripePublishableKey}}" data-amount="1999"
+                    data-name="egg picture" data-description="egg picture by lexi z" data-image="/img/marketplace.png" data-locale="auto">
+                    </script>
+                <script>
+                    //This hides the defauly Stripe Button
+                    document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+                </script>
+                <button type="submit" class="btn btn-secondary text-white btn-lg">Purchase Image</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <img src="/img/photo01.jpg" alt="photo" class="mt-5 img-fluid">
+        </div>
+    </div>
+</div>
