@@ -1,0 +1,17 @@
+{
+  "name": "stripedemo",
+  "version": "1.0.0",
+  "description": "using stripe demo",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Zak Grant",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "stripe": "^6.7.0"
+  }
+}
